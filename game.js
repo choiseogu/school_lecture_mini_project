@@ -81,8 +81,13 @@ function loop() {
     dino.vy = 0;
   }
   // 공룡 그리기 (이모지로 간단하게)
+  // 🦖 는 원래 왼쪽을 보고 있어서, 좌우로 뒤집어 앞(오른쪽)을 보게 합니다
   ctx.font = "36px serif";
-  ctx.fillText("🦖", dino.x, dino.y + dino.size);
+  ctx.save();                                       // 현재 그리기 설정을 잠시 저장
+  ctx.translate(dino.x + dino.size, dino.y + dino.size); // 기준점을 공룡의 오른쪽 아래로 옮기고
+  ctx.scale(-1, 1);                                 // 좌우를 뒤집은 뒤
+  ctx.fillText("🦖", 0, 0);                         // 그 자리에 그림
+  ctx.restore();                                    // 뒤집기 설정을 원래대로 되돌림 (다른 그림에 영향 X)
 
   // --- 선인장 만들기/움직이기 ---
   spawnTimer--;
