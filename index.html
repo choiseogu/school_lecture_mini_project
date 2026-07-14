@@ -1,0 +1,134 @@
+<!-- ============================================
+     자기소개 웹페이지 (강의용)
+     - HTML: 화면에 보일 '내용/구조'를 담당
+     - CSS(style.css): '디자인/모양'을 담당
+     - JS(script.js): '움직임/동작'을 담당
+     ============================================ -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홍길동 | 자기소개</title>
+
+  <!-- 디자인 파일과 동작 파일을 연결합니다 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- 상단 고정 메뉴 : 클릭하면 해당 위치로 부드럽게 이동합니다 -->
+  <nav class="nav">
+    <a href="#home" class="nav__logo">HONG</a>
+    <ul class="nav__menu">
+      <li><a href="#home">홈</a></li>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#school">학교</a></li>
+      <li><a href="#like">좋아하는 것</a></li>
+      <li><a href="#dream">꿈</a></li>
+    </ul>
+  </nav>
+
+  <!-- ① 첫 화면 (Hero) : 이름과 한 줄 소개 -->
+  <section id="home" class="hero">
+    <div class="hero__inner reveal">
+      <p class="hero__hello">안녕하세요, 저는</p>
+      <h1 class="hero__name">홍길동 입니다</h1>
+      <p class="hero__tagline">배우는 것을 좋아하는 예비 개발자</p>
+      <a href="#about" class="hero__scroll">아래로 스크롤 ↓</a>
+    </div>
+  </section>
+
+  <!-- ② 소개 : 사는 곳 등 기본 정보 -->
+  <section id="about" class="section">
+    <div class="section__inner reveal">
+      <h2 class="section__title">About Me</h2>
+      <p class="section__lead">간단한 저의 기본 정보입니다.</p>
+
+      <div class="info">
+        <div class="info__item">
+          <span class="info__label">이름</span>
+          <span class="info__value">홍길동</span>
+        </div>
+        <div class="info__item">
+          <span class="info__label">사는 곳</span>
+          <span class="info__value">서울특별시</span>
+        </div>
+        <div class="info__item">
+          <span class="info__label">MBTI</span>
+          <span class="info__value">ENFP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 학교 : 카드를 '클릭'하면 자세한 소개가 펼쳐집니다 -->
+  <section id="school" class="section section--gray">
+    <div class="section__inner reveal">
+      <h2 class="section__title">출신 학교</h2>
+      <p class="section__lead">카드를 클릭하면 이야기가 펼쳐져요.</p>
+
+      <div class="cards">
+        <!-- data-open="false" : 지금은 닫혀 있다는 표시 (JS가 이 값을 바꿉니다) -->
+        <button class="card" data-open="false">
+          <span class="card__emoji">🎒</span>
+          <span class="card__head">초등학교</span>
+          <span class="card__detail">서울초등학교를 졸업했어요. 이때 처음 컴퓨터를 만났습니다.</span>
+        </button>
+
+        <button class="card" data-open="false">
+          <span class="card__emoji">📚</span>
+          <span class="card__head">중학교</span>
+          <span class="card__detail">한빛중학교에 다녔어요. 과학과 수학을 좋아했습니다.</span>
+        </button>
+
+        <button class="card" data-open="false">
+          <span class="card__emoji">🎓</span>
+          <span class="card__head">고등학교</span>
+          <span class="card__detail">미래고등학교를 졸업했어요. 동아리에서 코딩을 시작했습니다.</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 좋아하는 것 : 태그 형태로 표시 -->
+  <section id="like" class="section">
+    <div class="section__inner reveal">
+      <h2 class="section__title">좋아하는 것</h2>
+      <p class="section__lead">제가 좋아하는 것들이에요.</p>
+
+      <ul class="tags">
+        <li class="tag">☕ 커피</li>
+        <li class="tag">🎮 게임</li>
+        <li class="tag">📷 사진</li>
+        <li class="tag">🎵 음악</li>
+        <li class="tag">💻 코딩</li>
+        <li class="tag">🐶 강아지</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ⑤ 꿈 : 마지막 메시지 -->
+  <section id="dream" class="section section--gray">
+    <div class="section__inner reveal">
+      <h2 class="section__title">나의 꿈</h2>
+      <p class="dream__text">
+        사람들에게 도움이 되는 서비스를 만드는<br />
+        <strong>멋진 개발자</strong>가 되는 것입니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 하단 : 연락처 -->
+  <footer class="footer">
+    <p>ⓒ 2026 홍길동</p>
+    <div class="footer__links">
+      <a href="mailto:example@email.com">이메일</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- 동작(JavaScript) 파일 연결 : 항상 </body> 바로 위에 두는 것이 안전합니다 -->
+  <script src="script.js"></script>
+</body>
+</html>

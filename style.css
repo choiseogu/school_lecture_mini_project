@@ -1,0 +1,251 @@
+/* ============================================
+   디자인 파일 (style.css)
+   - 심플·미니멀 컨셉
+   - 색/여백/글꼴 등 '보이는 모양'을 정합니다
+   ============================================ */
+
+/* 자주 쓰는 값을 변수로 미리 정해두면 나중에 바꾸기 쉬워요 */
+:root {
+  --color-text: #1a1a1a;     /* 기본 글자색 */
+  --color-sub: #6b7280;      /* 옅은 회색 글자 */
+  --color-bg: #ffffff;       /* 배경색 */
+  --color-gray: #f5f5f7;     /* 섹션 구분용 옅은 회색 */
+  --color-point: #2563eb;    /* 포인트(강조) 색 */
+  --max-width: 720px;        /* 내용의 최대 가로폭 */
+}
+
+/* 모든 요소의 기본 여백을 없애고, 크기 계산 방식을 통일합니다 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* 메뉴 클릭 시 '부드럽게' 이동 */
+}
+
+body {
+  font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* ---------- 상단 고정 메뉴 ---------- */
+.nav {
+  position: fixed;         /* 스크롤해도 항상 위에 붙어있게 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px); /* 뒤가 살짝 비치는 유리 느낌 */
+  z-index: 10;
+}
+.nav__logo {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+.nav__menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav__menu a {
+  text-decoration: none;
+  color: var(--color-sub);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.nav__menu a:hover {
+  color: var(--color-point);
+}
+
+/* ---------- 첫 화면 (Hero) ---------- */
+.hero {
+  min-height: 100vh;       /* 화면 높이만큼 꽉 채우기 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+.hero__hello {
+  color: var(--color-sub);
+  font-size: 18px;
+}
+.hero__name {
+  font-size: 48px;
+  margin: 8px 0 16px;
+}
+.hero__tagline {
+  color: var(--color-sub);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.hero__scroll {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-point);
+  font-size: 14px;
+  animation: bounce 1.8s infinite; /* 위아래로 살짝 움직이는 안내 */
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(8px); }
+}
+
+/* ---------- 공통 섹션 ---------- */
+.section {
+  padding: 100px 24px;
+}
+.section--gray {
+  background: var(--color-gray); /* 번갈아 회색을 줘서 구분감을 줍니다 */
+}
+.section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;      /* 가운데 정렬 */
+  text-align: center;
+}
+.section__title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.section__lead {
+  color: var(--color-sub);
+  margin-bottom: 40px;
+}
+
+/* ---------- About 기본 정보 ---------- */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.info__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-gray);
+  border-radius: 12px;
+}
+.info__label { color: var(--color-sub); }
+.info__value { font-weight: 600; }
+
+/* ---------- 클릭해서 펼치는 카드 ---------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.card {
+  /* button 태그의 기본 모양을 없애고 우리가 직접 디자인 */
+  border: 1px solid #e5e7eb;
+  background: var(--color-bg);
+  border-radius: 16px;
+  padding: 24px;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.card__emoji { font-size: 32px; }
+.card__head {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* 자세한 설명은 기본적으로 '숨김' 상태 */
+.card__detail {
+  font-size: 14px;
+  color: var(--color-sub);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+/* JS가 data-open="true"로 바꾸면 → 설명이 '펼쳐짐' */
+.card[data-open="true"] .card__detail {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+/* ---------- 좋아하는 것 (태그) ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  list-style: none;
+}
+.tag {
+  padding: 10px 18px;
+  background: var(--color-gray);
+  border-radius: 999px; /* 완전한 알약(둥근) 모양 */
+  font-size: 15px;
+}
+
+/* ---------- 꿈 ---------- */
+.dream__text {
+  font-size: 22px;
+  line-height: 1.8;
+}
+.dream__text strong { color: var(--color-point); }
+
+/* ---------- 하단 ---------- */
+.footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--color-sub);
+  font-size: 14px;
+}
+.footer__links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 12px;
+}
+.footer__links a {
+  color: var(--color-sub);
+  text-decoration: none;
+}
+.footer__links a:hover { color: var(--color-point); }
+
+/* ---------- 스크롤 등장 애니메이션 ---------- */
+/* 처음엔 살짝 아래에서 투명한 상태 */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+/* JS가 'show' 클래스를 붙이면 → 제자리로 나타남 */
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- 화면이 좁을 때(휴대폰) 조정 ---------- */
+@media (max-width: 600px) {
+  .nav__menu { gap: 12px; }
+  .nav__menu a { font-size: 12px; }
+  .hero__name { font-size: 36px; }
+  .section { padding: 70px 20px; }
+}
