@@ -76,6 +76,15 @@ body {
   text-align: center;
   padding: 0 24px;
 }
+.hero__photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;        /* 동그란 모양으로 */
+  object-fit: cover;         /* 사진이 찌그러지지 않게 꽉 채우기 */
+  border: 4px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: 24px;
+}
 .hero__hello {
   color: var(--color-sub);
   font-size: 18px;
