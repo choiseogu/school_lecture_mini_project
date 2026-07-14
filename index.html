@@ -101,12 +101,20 @@
 
       <ul class="tags">
         <li class="tag">☕ 커피</li>
-        <li class="tag">🎮 게임</li>
+        <!-- 게임 태그만 버튼으로 : 누르면 아래 게임이 나타납니다 -->
+        <li><button class="tag tag--game" id="gameToggle">🎮 게임 (눌러보세요!)</button></li>
         <li class="tag">📷 사진</li>
         <li class="tag">🎵 음악</li>
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
+
+      <!-- 공룡 달리기 게임 영역 : 처음엔 hidden(숨김) 상태 -->
+      <div class="game" id="game" hidden>
+        <p class="game__hint">스페이스바 또는 화면 클릭 → 점프! 🌵 선인장을 피하세요.</p>
+        <canvas id="gameCanvas" width="600" height="200"></canvas>
+        <p class="game__score">점수: <span id="gameScore">0</span></p>
+      </div>
     </div>
   </section>
 
@@ -132,5 +140,6 @@
 
   <!-- 동작(JavaScript) 파일 연결 : 항상 </body> 바로 위에 두는 것이 안전합니다 -->
   <script src="script.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>

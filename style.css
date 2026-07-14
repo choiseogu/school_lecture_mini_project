@@ -211,6 +211,43 @@ body {
   border-radius: 999px; /* 완전한 알약(둥근) 모양 */
   font-size: 15px;
 }
+/* 게임 태그(버튼)만 특별하게 : 눌러보고 싶게 강조 */
+.tag--game {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #fff;
+  background: var(--color-point);
+  transition: transform 0.15s, opacity 0.15s;
+}
+.tag--game:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ---------- 공룡 달리기 게임 ---------- */
+.game {
+  margin-top: 32px;
+}
+.game__hint {
+  font-size: 14px;
+  color: var(--color-sub);
+  margin-bottom: 12px;
+}
+#gameCanvas {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  /* 화면을 클릭해도 파란 선택영역이 안 생기게 */
+  touch-action: manipulation;
+}
+.game__score {
+  margin-top: 12px;
+  font-weight: 600;
+}
 
 /* ---------- 꿈 ---------- */
 .dream__text {
