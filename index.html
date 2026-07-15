@@ -103,21 +103,20 @@
         <li class="tag">☕ 커피</li>
         <!-- 게임 태그만 버튼으로 : 누르면 아래 게임이 나타납니다 -->
         <li><button class="tag tag--game" id="gameToggle">🎮 게임 </button></li>
-        <!-- 사진 태그 : 누르면 아래에 사진이 나타납니다 -->
-        <li><button class="tag tag--action" id="photoToggle">📷 사진</button></li>
+        <li class="tag">📷 사진</li>
         <li class="tag">🎵 음악</li>
         <li class="tag">💻 코딩</li>
-        <li class="tag">🐶 강아지</li>
+        <!-- 강아지 태그 : 누르면 아래에 강아지 사진이 나타납니다 -->
+        <li><button class="tag tag--action" id="dogToggle">🐶 강아지</button></li>
       </ul>
 
-      <!-- 사진 패널 : 처음엔 hidden(숨김) 상태 -->
-      <div class="panel" id="photoPanel" hidden>
-        <p class="panel__text">제가 좋아하는 사진이에요 📷</p>
-        <!-- ↓↓↓ 여기 src 주소를 본인 사진 URL로 바꾸세요 ↓↓↓ -->
+      <!-- 강아지 사진 패널 : 처음엔 hidden(숨김) 상태 -->
+      <div class="panel" id="dogPanel" hidden>
+        <p class="panel__text">제가 좋아하는 강아지예요 🐶</p>
         <img
           class="panel__photo"
           src="images/dog.jpeg"
-          alt="좋아하는 사진"
+          alt="강아지 사진"
         />
       </div>
 
