@@ -241,7 +241,7 @@ body {
   color: var(--color-point);
 }
 
-/* ---------- 사진 / 음악 패널 ---------- */
+/* ---------- 사진 패널 ---------- */
 .panel {
   margin-top: 32px;
   padding: 24px;
@@ -257,19 +257,6 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
-.panel__link {
-  display: inline-block;
-  color: var(--color-point);
-  font-size: 15px;
-  /* 긴 주소가 화면 밖으로 삐져나가지 않게 줄바꿈 */
-  word-break: break-all;
-}
-.panel__sub {
-  margin-top: 8px;
-  font-size: 13px;
-  color: var(--color-sub);
-}
-
 /* ---------- 공룡 달리기 게임 ---------- */
 .game {
   margin-top: 32px;
