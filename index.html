@@ -103,11 +103,37 @@
         <li class="tag">☕ 커피</li>
         <!-- 게임 태그만 버튼으로 : 누르면 아래 게임이 나타납니다 -->
         <li><button class="tag tag--game" id="gameToggle">🎮 게임 </button></li>
-        <li class="tag">📷 사진</li>
-        <li class="tag">🎵 음악</li>
+        <!-- 사진 태그 : 누르면 아래에 사진이 나타납니다 -->
+        <li><button class="tag tag--action" id="photoToggle">📷 사진</button></li>
+        <!-- 음악 태그 : 누르면 아래에 음악 링크가 나타납니다 -->
+        <li><button class="tag tag--action" id="musicToggle">🎵 음악</button></li>
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
+
+      <!-- 사진 패널 : 처음엔 hidden(숨김) 상태 -->
+      <div class="panel" id="photoPanel" hidden>
+        <p class="panel__text">제가 좋아하는 사진이에요 📷</p>
+        <!-- ↓↓↓ 여기 src 주소를 본인 사진 URL로 바꾸세요 ↓↓↓ -->
+        <img
+          class="panel__photo"
+          src="images/dog.jpeg"
+          alt="좋아하는 사진"
+        />
+      </div>
+
+      <!-- 음악 패널 : 처음엔 hidden(숨김) 상태 -->
+      <div class="panel" id="musicPanel" hidden>
+        <p class="panel__text">제가 좋아하는 음악이에요 🎵</p>
+        <!-- ↓↓↓ href(연결 주소)와 글자, 두 곳 모두 바꾸세요 ↓↓↓ -->
+        <a
+          class="panel__link"
+          href="https://open.spotify.com/track/55pCe0UgAeaeWKKSQqdiWh"
+          target="_blank"
+          rel="noopener"
+        >https://open.spotify.com/track/55pCe0UgAeaeWKKSQqdiWh</a>
+        <p class="panel__sub">클릭하면 새 탭에서 열려요</p>
+      </div>
 
       <!-- 공룡 달리기 게임 영역 : 처음엔 hidden(숨김) 상태 -->
       <div class="game" id="game" hidden>
