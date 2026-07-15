@@ -226,7 +226,7 @@ body {
   opacity: 0.9;
 }
 
-/* 사진·음악처럼 '눌러서 여는' 태그 버튼 */
+/* 강아지·음악처럼 '누를 수 있는' 태그 (button 과 a 둘 다에 사용) */
 .tag--action {
   border: 1px solid #d1d5db;
   cursor: pointer;
@@ -234,6 +234,8 @@ body {
   font-size: 15px;
   background: var(--color-bg);
   color: var(--color-text);
+  text-decoration: none;   /* 링크(a)로 쓸 때 생기는 밑줄 제거 */
+  display: inline-block;   /* 링크도 버튼과 같은 크기·여백을 갖도록 */
   transition: transform 0.15s, border-color 0.15s;
 }
 .tag--action:hover {
