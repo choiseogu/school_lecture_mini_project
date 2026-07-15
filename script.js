@@ -24,7 +24,33 @@ cards.forEach((card) => {
 
 
 /* --------------------------------------------
-   2) 스크롤해서 내려오면 내용이 스르륵 나타납니다
+   2) 사진 / 음악 버튼을 누르면 아래에 내용이 나타납니다
+   - 게임 버튼과 똑같은 원리 (hidden 을 껐다 켰다)
+   -------------------------------------------- */
+
+// [버튼 id, 열고닫을 패널 id] 를 짝지어 놓은 목록
+const panelPairs = [
+  ["photoToggle", "photoPanel"], // 📷 사진
+  ["musicToggle", "musicPanel"], // 🎵 음악
+];
+
+panelPairs.forEach(([buttonId, panelId]) => {
+  const button = document.getElementById(buttonId);
+  const panel = document.getElementById(panelId);
+
+  button.addEventListener("click", () => {
+    panel.hidden = !panel.hidden; // 숨김 <-> 보임 뒤집기
+
+    // 열었을 때는 그 패널이 잘 보이도록 부드럽게 스크롤
+    if (!panel.hidden) {
+      panel.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+});
+
+
+/* --------------------------------------------
+   3) 스크롤해서 내려오면 내용이 스르륵 나타납니다
    - IntersectionObserver: 요소가 화면에 보이는지 감시하는 도구
    -------------------------------------------- */
 
