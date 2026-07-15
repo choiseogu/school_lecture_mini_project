@@ -77,8 +77,9 @@ body {
   padding: 0 24px;
 }
 .hero__photo {
-  width: 140px;
-  height: 140px;
+  /* 사진 크기 : 이 숫자만 바꾸면 커지고 작아져요 (가로·세로 같게 해야 동그래요) */
+  width: 200px;
+  height: 200px;
   border-radius: 50%;        /* 동그란 모양으로 */
   object-fit: cover;         /* 사진이 찌그러지지 않게 꽉 채우기 */
   border: 4px solid #fff;
@@ -325,5 +326,7 @@ body {
   .nav__menu { gap: 12px; }
   .nav__menu a { font-size: 12px; }
   .hero__name { font-size: 36px; }
+  /* 좁은 화면에서는 사진을 조금 작게 */
+  .hero__photo { width: 160px; height: 160px; }
   .section { padding: 70px 20px; }
 }
