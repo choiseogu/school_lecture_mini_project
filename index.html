@@ -103,6 +103,8 @@
         <li class="tag">☕ 커피</li>
         <!-- 게임 태그만 버튼으로 : 누르면 아래 게임이 나타납니다 -->
         <li><button class="tag tag--game" id="gameToggle">🎮 게임 </button></li>
+        <!-- 미로 태그 : 누르면 아래 미로 게임이 나타납니다 -->
+        <li><button class="tag tag--game" id="mazeToggle">🧩 미로</button></li>
         <li class="tag">📷 사진</li>
         <!-- 음악 태그 : 누르면 새 탭에서 스포티파이가 열립니다 -->
         <li>
@@ -134,6 +136,14 @@
         <canvas id="gameCanvas" width="600" height="200"></canvas>
         <p class="game__score">점수: <span id="gameScore">0</span></p>
       </div>
+
+      <!-- 미로 탈출 게임 영역 : 처음엔 hidden(숨김) 상태 -->
+      <div class="game" id="maze" hidden>
+        <p class="game__hint">방향키(← ↑ → ↓)로 🙂 를 움직여 🚪 출구로 탈출하세요!</p>
+        <canvas id="mazeCanvas" width="600" height="440"></canvas>
+        <p class="game__score">움직인 횟수: <span id="mazeMoves">0</span></p>
+        <button class="maze__reset" id="mazeReset">처음부터 다시하기</button>
+      </div>
     </div>
   </section>
 
@@ -160,5 +170,6 @@
   <!-- 동작(JavaScript) 파일 연결 : 항상 </body> 바로 위에 두는 것이 안전합니다 -->
   <script src="script.js"></script>
   <script src="game.js"></script>
+  <script src="maze.js"></script>
 </body>
 </html>

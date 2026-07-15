@@ -284,6 +284,31 @@ body {
   font-weight: 600;
 }
 
+/* ---------- 미로 게임 ---------- */
+#mazeCanvas {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+.maze__reset {
+  margin-top: 12px;
+  padding: 8px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: var(--color-bg);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.maze__reset:hover {
+  border-color: var(--color-point);
+  color: var(--color-point);
+}
+
 /* ---------- 꿈 ---------- */
 .dream__text {
   font-size: 22px;
