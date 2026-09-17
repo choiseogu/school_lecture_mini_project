@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>최서구 | 자기소개</title>
+  <title>홍길동 | 자기소개</title>
 
   <!-- 디자인 파일과 동작 파일을 연결합니다 -->
   <link rel="stylesheet" href="style.css" />
@@ -19,7 +19,7 @@
 
   <!-- 상단 고정 메뉴 : 클릭하면 해당 위치로 부드럽게 이동합니다 -->
   <nav class="nav">
-    <a href="#home" class="nav__logo">CHOI</a>
+    <a href="#home" class="nav__logo">HONG</a>
     <ul class="nav__menu">
       <li><a href="#home">홈</a></li>
       <li><a href="#about">소개</a></li>
@@ -32,11 +32,9 @@
   <!-- ① 첫 화면 (Hero) : 이름과 한 줄 소개 -->
   <section id="home" class="hero">
     <div class="hero__inner reveal">
-      <!-- 프로필 사진 : images 폴더에 넣은 사진 파일을 불러옵니다 -->
-      <img src="images/profile.jpg" alt="최서구 프로필 사진" class="hero__photo" />
-      <p class="hero__hello">안녕하세요, 저희는</p>
-      <h1 class="hero__name"> 미남과 평범한 사람입니다</h1>
-      <p class="hero__tagline">배우는 것을 좋아하는 개발자</p>
+      <p class="hero__hello">안녕하세요, 저는</p>
+      <h1 class="hero__name">홍길동 입니다</h1>
+      <p class="hero__tagline">배우는 것을 좋아하는 예비 개발자</p>
       <a href="#about" class="hero__scroll">아래로 스크롤 ↓</a>
     </div>
   </section>
@@ -50,11 +48,11 @@
       <div class="info">
         <div class="info__item">
           <span class="info__label">이름</span>
-          <span class="info__value">최서구</span>
+          <span class="info__value">홍길동</span>
         </div>
         <div class="info__item">
           <span class="info__label">사는 곳</span>
-          <span class="info__value">서울특별시 노원구</span>
+          <span class="info__value">서울특별시</span>
         </div>
         <div class="info__item">
           <span class="info__label">MBTI</span>
@@ -75,19 +73,19 @@
         <button class="card" data-open="false">
           <span class="card__emoji">🎒</span>
           <span class="card__head">초등학교</span>
-          <span class="card__detail">태랑초등학교를 졸업했어요. 노원구 공릉동에 있는 학교입니다.</span>
+          <span class="card__detail">서울초등학교를 졸업했어요. 이때 처음 컴퓨터를 만났습니다.</span>
         </button>
 
         <button class="card" data-open="false">
           <span class="card__emoji">📚</span>
           <span class="card__head">중학교</span>
-          <span class="card__detail">공릉중학교에 다녔어요. 수학을 좋아했습니다.</span>
+          <span class="card__detail">한빛중학교에 다녔어요. 과학과 수학을 좋아했습니다.</span>
         </button>
 
         <button class="card" data-open="false">
           <span class="card__emoji">🎓</span>
           <span class="card__head">고등학교</span>
-          <span class="card__detail">청원고등학교를 졸업했어요. 이때까지는 수학 교사가 되고 싶었어요.</span>
+          <span class="card__detail">미래고등학교를 졸업했어요. 동아리에서 코딩을 시작했습니다.</span>
         </button>
       </div>
     </div>
@@ -101,49 +99,12 @@
 
       <ul class="tags">
         <li class="tag">☕ 커피</li>
-        <!-- 게임 태그만 버튼으로 : 누르면 아래 게임이 나타납니다 -->
-        <li><button class="tag tag--game" id="gameToggle">🎮 게임 </button></li>
-        <!-- 미로 태그 : 누르면 아래 미로 게임이 나타납니다 -->
-        <li><button class="tag tag--game" id="mazeToggle">🧩 미로</button></li>
+        <li class="tag">🎮 게임</li>
         <li class="tag">📷 사진</li>
-        <!-- 음악 태그 : 누르면 새 탭에서 스포티파이가 열립니다 -->
-        <li>
-          <a
-            class="tag tag--action"
-            href="https://open.spotify.com/track/55pCe0UgAeaeWKKSQqdiWh"
-            target="_blank"
-            rel="noopener"
-          >🎵 음악</a>
-        </li>
+        <li class="tag">🎵 음악</li>
         <li class="tag">💻 코딩</li>
-        <!-- 강아지 태그 : 누르면 아래에 강아지 사진이 나타납니다 -->
-        <li><button class="tag tag--action" id="dogToggle">🐶 강아지</button></li>
+        <li class="tag">🐶 강아지</li>
       </ul>
-
-      <!-- 강아지 사진 패널 : 처음엔 hidden(숨김) 상태 -->
-      <div class="panel" id="dogPanel" hidden>
-        <p class="panel__text">제가 좋아하는 강아지예요 🐶</p>
-        <img
-          class="panel__photo"
-          src="images/dog.jpeg"
-          alt="강아지 사진"
-        />
-      </div>
-
-      <!-- 공룡 달리기 게임 영역 : 처음엔 hidden(숨김) 상태 -->
-      <div class="game" id="game" hidden>
-        <p class="game__hint">스페이스바 또는 화면 클릭 → 점프! 🌵 선인장을 피하세요.</p>
-        <canvas id="gameCanvas" width="600" height="200"></canvas>
-        <p class="game__score">점수: <span id="gameScore">0</span></p>
-      </div>
-
-      <!-- 미로 탈출 게임 영역 : 처음엔 hidden(숨김) 상태 -->
-      <div class="game" id="maze" hidden>
-        <p class="game__hint">방향키(← ↑ → ↓)로 🙂 를 움직여 🚪 출구로 탈출하세요!</p>
-        <canvas id="mazeCanvas" width="600" height="440"></canvas>
-        <p class="game__score">움직인 횟수: <span id="mazeMoves">0</span></p>
-        <button class="maze__reset" id="mazeReset">처음부터 다시하기</button>
-      </div>
     </div>
   </section>
 
@@ -162,14 +123,12 @@
   <footer class="footer">
     <p>ⓒ 2026 홍길동</p>
     <div class="footer__links">
-      <a href="mailto:s2000ten@naver.com">이메일</a>
-      <a href="https://github.com/choiseogu" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:example@email.com">이메일</a>
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
 
   <!-- 동작(JavaScript) 파일 연결 : 항상 </body> 바로 위에 두는 것이 안전합니다 -->
   <script src="script.js"></script>
-  <script src="game.js"></script>
-  <script src="maze.js"></script>
 </body>
 </html>

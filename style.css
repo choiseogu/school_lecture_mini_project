@@ -76,16 +76,6 @@ body {
   text-align: center;
   padding: 0 24px;
 }
-.hero__photo {
-  /* 사진 크기 : 이 숫자만 바꾸면 커지고 작아져요 (가로·세로 같게 해야 동그래요) */
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;        /* 동그란 모양으로 */
-  object-fit: cover;         /* 사진이 찌그러지지 않게 꽉 채우기 */
-  border: 4px solid #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  margin-bottom: 24px;
-}
 .hero__hello {
   color: var(--color-sub);
   font-size: 18px;
@@ -212,102 +202,6 @@ body {
   border-radius: 999px; /* 완전한 알약(둥근) 모양 */
   font-size: 15px;
 }
-/* 게임 태그(버튼)만 특별하게 : 눌러보고 싶게 강조 */
-.tag--game {
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  color: #fff;
-  background: var(--color-point);
-  transition: transform 0.15s, opacity 0.15s;
-}
-.tag--game:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* 강아지·음악처럼 '누를 수 있는' 태그 (button 과 a 둘 다에 사용) */
-.tag--action {
-  border: 1px solid #d1d5db;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 15px;
-  background: var(--color-bg);
-  color: var(--color-text);
-  text-decoration: none;   /* 링크(a)로 쓸 때 생기는 밑줄 제거 */
-  display: inline-block;   /* 링크도 버튼과 같은 크기·여백을 갖도록 */
-  transition: transform 0.15s, border-color 0.15s;
-}
-.tag--action:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-point);
-  color: var(--color-point);
-}
-
-/* ---------- 사진 패널 ---------- */
-.panel {
-  margin-top: 32px;
-  padding: 24px;
-  background: var(--color-gray);
-  border-radius: 16px;
-}
-.panel__text {
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-.panel__photo {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-/* ---------- 공룡 달리기 게임 ---------- */
-.game {
-  margin-top: 32px;
-}
-.game__hint {
-  font-size: 14px;
-  color: var(--color-sub);
-  margin-bottom: 12px;
-}
-#gameCanvas {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  background: #fafafa;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  /* 화면을 클릭해도 파란 선택영역이 안 생기게 */
-  touch-action: manipulation;
-}
-.game__score {
-  margin-top: 12px;
-  font-weight: 600;
-}
-
-/* ---------- 미로 게임 ---------- */
-#mazeCanvas {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-}
-.maze__reset {
-  margin-top: 12px;
-  padding: 8px 18px;
-  border: 1px solid #d1d5db;
-  border-radius: 999px;
-  background: var(--color-bg);
-  font-family: inherit;
-  font-size: 14px;
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-}
-.maze__reset:hover {
-  border-color: var(--color-point);
-  color: var(--color-point);
-}
 
 /* ---------- 꿈 ---------- */
 .dream__text {
@@ -353,7 +247,5 @@ body {
   .nav__menu { gap: 12px; }
   .nav__menu a { font-size: 12px; }
   .hero__name { font-size: 36px; }
-  /* 좁은 화면에서는 사진을 조금 작게 */
-  .hero__photo { width: 160px; height: 160px; }
   .section { padding: 70px 20px; }
 }
