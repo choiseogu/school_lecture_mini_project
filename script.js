@@ -256,4 +256,10 @@ if (gameToggleBtn && dinoGame && canvas) {
     e.preventDefault();
     jump();
   });
+
+  // 좌클릭(캔버스 클릭) → 점프
+  canvas.addEventListener("click", () => {
+    if (dinoGame.hidden) return;
+    jump();
+  });
 }
