@@ -106,6 +106,17 @@
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
+
+      <!-- 게임 버튼 : 누르면 아래에 공룡 점프 게임이 나타납니다 -->
+      <div class="game-launch">
+        <button id="gameToggleBtn" class="game-btn" aria-expanded="false">🎮 공룡 게임 하기</button>
+      </div>
+
+      <div id="dinoGame" class="dino-game" hidden>
+        <p class="dino-game__score">점수: <span id="dinoScore">0</span></p>
+        <canvas id="dinoCanvas" width="600" height="200"></canvas>
+        <p class="dino-game__hint">스페이스 바를 눌러 점프! 선인장을 피해보세요.</p>
+      </div>
     </div>
   </section>
 

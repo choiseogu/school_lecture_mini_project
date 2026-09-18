@@ -211,6 +211,45 @@ body {
   font-size: 15px;
 }
 
+/* ---------- 공룡 점프 게임 ---------- */
+.game-launch {
+  margin-top: 32px;
+}
+.game-btn {
+  border: none;
+  background: var(--color-point);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.game-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+.dino-game {
+  margin-top: 24px;
+}
+.dino-game__score {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.dino-game canvas {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f5f5f7;
+}
+.dino-game__hint {
+  color: var(--color-sub);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 /* ---------- 꿈 ---------- */
 .dream__text {
   font-size: 22px;
