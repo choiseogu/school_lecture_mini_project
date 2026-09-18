@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>최서구 | 자기소개</title>
+  <title>홍길동 | 자기소개</title>
 
   <!-- 디자인 파일과 동작 파일을 연결합니다 -->
   <link rel="stylesheet" href="style.css" />
@@ -19,7 +19,7 @@
 
   <!-- 상단 고정 메뉴 : 클릭하면 해당 위치로 부드럽게 이동합니다 -->
   <nav class="nav">
-    <a href="#home" class="nav__logo">CSG</a>
+    <a href="#home" class="nav__logo">HONG</a>
     <ul class="nav__menu">
       <li><a href="#home">홈</a></li>
       <li><a href="#about">소개</a></li>
@@ -32,10 +32,9 @@
   <!-- ① 첫 화면 (Hero) : 이름과 한 줄 소개 -->
   <section id="home" class="hero">
     <div class="hero__inner reveal">
-      <img src="image/choiandcho.jpg" alt="최서구 얼굴 사진" class="hero__photo" />
-      <p class="hero__hello">안녕하세요, 우리는</p>
-      <h1 class="hero__name">최와조 입니다</h1>
-      <p class="hero__tagline">배우는 것을 좋아하는 개발자</p>
+      <p class="hero__hello">안녕하세요, 저는</p>
+      <h1 class="hero__name">홍길동 입니다</h1>
+      <p class="hero__tagline">배우는 것을 좋아하는 예비 개발자</p>
       <a href="#about" class="hero__scroll">아래로 스크롤 ↓</a>
     </div>
   </section>
@@ -49,7 +48,7 @@
       <div class="info">
         <div class="info__item">
           <span class="info__label">이름</span>
-          <span class="info__value">최서구</span>
+          <span class="info__value">홍길동</span>
         </div>
         <div class="info__item">
           <span class="info__label">사는 곳</span>
@@ -57,7 +56,7 @@
         </div>
         <div class="info__item">
           <span class="info__label">MBTI</span>
-          <span class="info__value">ENFP, ESTP</span>
+          <span class="info__value">ENFP</span>
         </div>
       </div>
     </div>
@@ -74,19 +73,19 @@
         <button class="card" data-open="false">
           <span class="card__emoji">🎒</span>
           <span class="card__head">초등학교</span>
-          <span class="card__detail">태랑초등학교를 졸업했어요. 이때 처음 컴퓨터를 만났습니다.</span>
+          <span class="card__detail">서울초등학교를 졸업했어요. 이때 처음 컴퓨터를 만났습니다.</span>
         </button>
 
         <button class="card" data-open="false">
           <span class="card__emoji">📚</span>
           <span class="card__head">중학교</span>
-          <span class="card__detail">공릉중학교에 다녔어요. 수학을 좋아했습니다.</span>
+          <span class="card__detail">한빛중학교에 다녔어요. 과학과 수학을 좋아했습니다.</span>
         </button>
 
         <button class="card" data-open="false">
           <span class="card__emoji">🎓</span>
           <span class="card__head">고등학교</span>
-          <span class="card__detail">청원고등학교를 졸업했어요. 대학교 입학 후 코딩을 시작했어요.</span>
+          <span class="card__detail">미래고등학교를 졸업했어요. 동아리에서 코딩을 시작했습니다.</span>
         </button>
       </div>
     </div>
@@ -99,22 +98,13 @@
       <p class="section__lead">제가 좋아하는 것들이에요.</p>
 
       <ul class="tags">
-        <li class="tag">☕ 코카콜라</li>
-        <li class="tag">
-          <button type="button" class="tag tag--game" id="gameToggleBtn" aria-expanded="false" aria-controls="dinoGame">🎮 게임</button>
-        </li>
+        <li class="tag">☕ 커피</li>
+        <li class="tag">🎮 게임</li>
         <li class="tag">📷 사진</li>
         <li class="tag">🎵 음악</li>
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
-
-      <!-- 게임 버튼을 누르면 나타나는 공룡 점프 게임 -->
-      <div id="dinoGame" class="dino-game" hidden>
-        <p class="dino-game__hint">스페이스 바를 눌러 점프하세요!</p>
-        <canvas id="dinoCanvas" class="dino-game__canvas" width="600" height="200"></canvas>
-        <div class="dino-game__score">점수: <span id="dinoScore">0</span></div>
-      </div>
     </div>
   </section>
 
@@ -131,7 +121,7 @@
 
   <!-- 하단 : 연락처 -->
   <footer class="footer">
-    <p>ⓒ 2026 최서구</p>
+    <p>ⓒ 2026 홍길동</p>
     <div class="footer__links">
       <a href="mailto:example@email.com">이메일</a>
       <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
