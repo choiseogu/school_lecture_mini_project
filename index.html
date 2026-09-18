@@ -32,6 +32,7 @@
   <!-- ① 첫 화면 (Hero) : 이름과 한 줄 소개 -->
   <section id="home" class="hero">
     <div class="hero__inner reveal">
+      <img src="image/face2.png" alt="최서구 얼굴 사진" class="hero__photo" />
       <p class="hero__hello">안녕하세요, 저는</p>
       <h1 class="hero__name">최서구 입니다</h1>
       <p class="hero__tagline">배우는 것을 좋아하는 개발자</p>
@@ -99,12 +100,21 @@
 
       <ul class="tags">
         <li class="tag">☕ 커피</li>
-        <li class="tag">🎮 게임</li>
+        <li class="tag">
+          <button type="button" class="tag tag--game" id="gameToggleBtn" aria-expanded="false" aria-controls="dinoGame">🎮 게임</button>
+        </li>
         <li class="tag">📷 사진</li>
         <li class="tag">🎵 음악</li>
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
+
+      <!-- 게임 버튼을 누르면 나타나는 공룡 점프 게임 -->
+      <div id="dinoGame" class="dino-game" hidden>
+        <p class="dino-game__hint">스페이스 바를 눌러 점프하세요!</p>
+        <canvas id="dinoCanvas" class="dino-game__canvas" width="600" height="200"></canvas>
+        <div class="dino-game__score">점수: <span id="dinoScore">0</span></div>
+      </div>
     </div>
   </section>
 

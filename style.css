@@ -76,6 +76,14 @@ body {
   text-align: center;
   padding: 0 24px;
 }
+.hero__photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
 .hero__hello {
   color: var(--color-sub);
   font-size: 18px;
@@ -201,6 +209,41 @@ body {
   background: var(--color-gray);
   border-radius: 999px; /* 완전한 알약(둥근) 모양 */
   font-size: 15px;
+}
+/* 게임 버튼 : li.tag 안에 들어간 button 이라 기본 스타일을 다시 없애줍니다 */
+.tag--game {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, color 0.2s;
+}
+.tag--game:hover {
+  background: var(--color-point);
+  color: #fff;
+}
+
+/* ---------- 공룡 점프 게임 ---------- */
+.dino-game {
+  margin: 32px auto 0;
+  max-width: 600px;
+}
+.dino-game__hint {
+  color: var(--color-sub);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.dino-game__canvas {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3 / 1;
+  background: var(--color-gray);
+  border-radius: 12px;
+  display: block;
+}
+.dino-game__score {
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--color-sub);
 }
 
 /* ---------- 꿈 ---------- */
