@@ -203,6 +203,47 @@ body {
   font-size: 15px;
 }
 
+/* 태그처럼 보이지만 누를 수 있는 버튼 (게임 열기) */
+.tag--button {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.tag--button:hover,
+.tag--button:focus-visible {
+  color: var(--color-point);
+  outline: 2px solid var(--color-point);
+  outline-offset: 3px;
+}
+
+/* ---------- 공룡 점프 게임 ---------- */
+.dino-game {
+  margin-top: 24px;
+}
+.dino-game__score {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.dino-game canvas {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f5f5f7;
+  cursor: pointer; /* 클릭해서 점프할 수 있다는 표시 */
+  touch-action: manipulation; /* 모바일에서 두 번 탭 확대 방지 */
+}
+.dino-game canvas:focus-visible {
+  outline: 2px solid var(--color-point);
+  outline-offset: 4px;
+}
+.dino-game__hint {
+  color: var(--color-sub);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 /* ---------- 꿈 ---------- */
 .dream__text {
   font-size: 22px;
