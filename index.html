@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>최서구 | 자기소개</title>
+  <title>홍길동 | 자기소개</title>
 
   <!-- 디자인 파일과 동작 파일을 연결합니다 -->
   <link rel="stylesheet" href="style.css" />
@@ -19,7 +19,7 @@
 
   <!-- 상단 고정 메뉴 : 클릭하면 해당 위치로 부드럽게 이동합니다 -->
   <nav class="nav">
-    <a href="#home" class="nav__logo">CSG</a>
+    <a href="#home" class="nav__logo">HONG</a>
     <ul class="nav__menu">
       <li><a href="#home">홈</a></li>
       <li><a href="#about">소개</a></li>
@@ -33,7 +33,7 @@
   <section id="home" class="hero">
     <div class="hero__inner reveal">
       <p class="hero__hello">안녕하세요, 저는</p>
-      <h1 class="hero__name">최서구 입니다</h1>
+      <h1 class="hero__name">홍길동 입니다</h1>
       <p class="hero__tagline">배우는 것을 좋아하는 예비 개발자</p>
       <a href="#about" class="hero__scroll">아래로 스크롤 ↓</a>
     </div>
@@ -42,14 +42,13 @@
   <!-- ② 소개 : 사는 곳 등 기본 정보 -->
   <section id="about" class="section">
     <div class="section__inner reveal">
-      <img src="image/face.jpg" alt="최서구 얼굴 사진" class="about__photo" />
       <h2 class="section__title">About Me</h2>
       <p class="section__lead">간단한 저의 기본 정보입니다.</p>
 
       <div class="info">
         <div class="info__item">
           <span class="info__label">이름</span>
-          <span class="info__value">최서구</span>
+          <span class="info__value">홍길동</span>
         </div>
         <div class="info__item">
           <span class="info__label">사는 곳</span>
@@ -106,17 +105,6 @@
         <li class="tag">💻 코딩</li>
         <li class="tag">🐶 강아지</li>
       </ul>
-
-      <!-- 게임 버튼 : 누르면 아래에 공룡 점프 게임이 나타납니다 -->
-      <div class="game-launch">
-        <button id="gameToggleBtn" class="game-btn" aria-expanded="false">🎮 공룡 게임 하기</button>
-      </div>
-
-      <div id="dinoGame" class="dino-game" hidden>
-        <p class="dino-game__score">점수: <span id="dinoScore">0</span></p>
-        <canvas id="dinoCanvas" width="600" height="200"></canvas>
-        <p class="dino-game__hint">스페이스 바를 눌러 점프! 선인장을 피해보세요.</p>
-      </div>
     </div>
   </section>
 
@@ -133,7 +121,7 @@
 
   <!-- 하단 : 연락처 -->
   <footer class="footer">
-    <p>ⓒ 2026 최서구</p>
+    <p>ⓒ 2026 홍길동</p>
     <div class="footer__links">
       <a href="mailto:example@email.com">이메일</a>
       <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
